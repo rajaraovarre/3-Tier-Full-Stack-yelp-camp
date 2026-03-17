@@ -4,8 +4,8 @@ metadata:
   name: yelpcamp-quota
 spec:
   hard:
-    pods: "20"
-    requests.cpu: "2"
-    requests.memory: 4Gi
-    limits.cpu: "4"
-    limits.memory: 6Gi
+    pods: "5"
+    requests.cpu: "500m"
+    requests.memory: "512Mi"
+    limits.cpu: "1"
+    limits.memory: "800Mi"
