@@ -14,17 +14,15 @@ spec:
     spec:
       affinity:
         podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-            - weight: 100
-              podAffinityTerm:
-                labelSelector:
-                  matchLabels:
-                   app: yelp-camp
-                topologyKey: kubernetes.io/hostname
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: yelp-camp
+              topologyKey: kubernetes.io/hostname
 
       containers:
         - name: yelp-camp-container
-          image: razvarre/eventsappimage:latest
+          image: shaikmustafa/finalcamp:v1
           ports:
             - containerPort: 3000
 
